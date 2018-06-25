@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +11,62 @@
     <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
     <link rel="stylesheet" href="./css/common.css">
 </head>
+
 <body>
-    <div class="lt_aside"></div>
+    <!-- 侧边栏 -->
+    <div class="lt_aside">
+        <div class="aside_top">黑马21期</div>
+        <div class="aside_user">
+            <div class="aside_userImg">
+                <img src="./images/default.png" alt="">
+            </div>
+            <p>超级管理员</p>
+        </div>
+        <div class="aside_nav">
+            <ul>
+                <li>
+                    <a href="#" class="current">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <span>用户管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="aside_manage">
+                        <i class="glyphicon glyphicon-list"></i>
+                        <span>分类管理</span>
+                    </a>
+                    <div class="child" style="display: none">
+                        <a href="#">一级分类</a>
+                        <a href="#">二级分类</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="glyphicon glyphicon-tags"></i>
+                        <span>商品管理</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="lt_main">
+        <!-- 中间头部 -->
+        <div class="lt_head">
+            <a href="#" class="pull-left icon_menu">
+                <i class="glyphicon glyphicon-align-justify"></i>
+            </a>
+            <a href="#" class="pull-right">
+                <i class="glyphicon glyphicon-log-out"> </i>
+            </a>
+        </div>
+        <!-- 中间导航 -->
+        <div class="lt_nav">
+            <ol class="breadcrumb">
+                <li><a href="#">管理系统</a></li>
+                <li>用户管理</li>
+            </ol>
+        </div>
+    </div>
 
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
@@ -19,4 +74,5 @@
     <script src="./lib/nprogress/nprogress.js"></script>
     <script src="./js/common.js"></script>
 </body>
+
 </html>
