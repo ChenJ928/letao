@@ -11,8 +11,8 @@ $(document).ajaxComplete(function () {
     }, 1000)
 })
 
-// 侧边栏点击效果
 $(function () {
+    // 侧边栏点击效果
 
     $('.aside_nav .aside_manage').click(function () {
         $(".aside_nav .child").stop().slideToggle();
@@ -23,4 +23,22 @@ $(function () {
         $('.lt_main').toggleClass('hiddenMenu');
         $('.lt_head').toggleClass('hiddenMenu');
     })
+
+    //模态框
+    $('.icon_out').click(function () {
+        $('.myModal').modal("show");
+    })
+    $('.modal_out').click(function () {
+        $.ajax({
+            type: 'get',
+            url: '/employee/employeeLogout',
+            dataType: 'json',
+            success: function(info) {
+                if(info.success) {
+                    location.href = 'login.html'
+                }
+            }
+        })
+    })
 })
+
