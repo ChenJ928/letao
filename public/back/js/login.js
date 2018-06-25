@@ -1,13 +1,6 @@
-// 进行表单校验
 $(function () {
+    // 进行表单校验
     $('#form').bootstrapValidator({
-        // 配置图标
-        feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',   // 校验成功
-            invalid: 'glyphicon glyphicon-remove', // 校验失败
-            validating: 'glyphicon glyphicon-refresh'  // 校验中
-        },
-        
         fields: {
             //校验用户名，对应name表单的name属性
             username: {
@@ -45,5 +38,18 @@ $(function () {
                 }
             },
         }
-    })
+    });
+
+    // $('#form').on('success.form.bv', function (e) {
+    //     // 阻止表单提交
+    //     e.preventDefault();
+        
+    //     $.ajax({
+    //         type:'get',
+    //         url: '../index.html',
+    //         data: $('#form').serialize(),
+    //         dataType: 'json',
+
+    //     })
+    // })
 })
