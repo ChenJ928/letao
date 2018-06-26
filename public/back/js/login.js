@@ -60,7 +60,7 @@ $(function () {
             success: function (info) {
                 console.log(info);
                 if (info.success) {
-                    location.href = 'first.html';
+                    location.href = 'index.html';
                 }
                 else if (info.error == 1000) {
                     console.log(info.message);

@@ -64,7 +64,7 @@ html, body {
 
 
 
-.lt_aside .aside_nav ul li a{
+.aside_nav a{
     height: 40px;
     line-height: 40px;
     display: block;
@@ -75,7 +75,7 @@ html, body {
 .lt_aside .aside_nav ul li a i {
     margin-right: 10px;
 }
-.lt_aside .aside_nav ul li a.current {
+.lt_aside .aside_nav .current{
     background-color: #1D1F21;
     border-left: 3px solid #006699;
 }
