@@ -69,6 +69,7 @@ $(function () {
             success: function (info) {
                 if(info.success) {
                     $('.addModal').modal("hide"); 
+                    render();
                 }
             }
         })
