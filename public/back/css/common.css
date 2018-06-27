@@ -85,7 +85,8 @@ html, body {
 /* 左侧栏结束 */
 
 .lt_main {
-    padding-left: 180px;
+    padding-left: 195px;
+    padding-right: 15px;
     padding-top: 50px;
     width: 100%;
     transition: all 1s;
@@ -122,7 +123,7 @@ html, body {
 /* 中间导航开始 */
 
 .lt_nav {
-    margin: 20px;
+    margin: 20px 0;
 }
 .lt_nav .breadcrumb li{
     color: #777777;
