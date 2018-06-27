@@ -128,38 +128,38 @@
                     <div class="form-group">
                         <div class="dropdown">
                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                              请选择一级分类
+                              <span id="btn_seletor">请选择一级分类</span>
                               <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-                              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-                              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                              
                             </ul>
                         </div>
+                        <input type="hidden" name="categoryId">
+                        <input type="hidden" name="hot" value="1">
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="请输入二级分类" name="brandName">
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-default">上传图片</button>
-                        <input type="file" style="display: none">
+                        <label for="fileupload" class="btn btn-default">上传图片</label>
+                        <input id="fileupload" type="file" name="pic1" data-url="/category/addSecondCategoryPic" multiple style="display: none">
                     </div>
                     <div class="form-group">
-                        <img src="./images/none.png" alt="" width="100">
+                        <img src="./images/none.png" alt="" width="100" id="upImg">
+                        <input type="hidden" name="brandLogo">
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default modal_out" data-dismiss="modal">退出</button>
-                    <button type="button" class="btn btn-primary">登录</button>
+                    <button type="button" class="btn btn-default modal_out" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary">添加</button>
                 </div>
               </form>
               </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
           </div><!-- /.modal -->
 
-    <!-- 前端模块化 -->
+    <!-- 表格前端模块化 -->
     <script type="text/html" id="stem">
         {{each rows v i}}
             <tr>
@@ -171,7 +171,16 @@
         {{/each}}
     </script>
 
+    <!-- 添加分类前端模块化 -->
+    <script type="text/html" id="sttem">
+        {{each rows v i}}
+        <li role="presentation" ><a tabindex="-1" href="#" data-id="{{v.id}}">{{ v.categoryName }}</a></li>
+        {{/each}}
+    </script>
+
     <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
