@@ -1,5 +1,5 @@
 $(document).ajaxStart(function () {
-    // console.log('ajax提交开始');
+    // console.log('aja4u提交开始');
     NProgress.start();
 });
 $(document).ajaxComplete(function () {
