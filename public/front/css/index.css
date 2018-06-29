@@ -1,0 +1,52 @@
+/* 轮播图 */
+.lt_main .lt_banner {
+    position: relative;
+}
+
+/* 导航 */
+.lt_nav {
+    padding: 10px;
+}
+.lt_nav ul li{
+    float: left;
+    width: 33.33%;
+}
+.lt_nav ul li a {
+    display: block;
+    width: 100%;
+}
+.lt_nav ul li a img {
+    display: block;
+    width: 100%;
+}
+
+/* 产品 */
+.lt_product {
+    padding: 10px;
+    text-align: center;
+}
+.lt_product li {
+    width: 48%;
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.lt_product li a {
+    padding: 10px;
+    display: block;
+}
+.lt_product li:nth-child(odd) {
+    margin-right: 4%;
+}
+.lt_product li a img {
+    display: block;
+    width: 100%;
+}
+.lt_product li a p {
+    text-align: center;
+}
+.lt_product li a span {
+    color: red;
+}
