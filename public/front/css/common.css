@@ -1,4 +1,4 @@
-html body {
+html,body {
     width: 100%;
     height: 100%;
 }
@@ -18,7 +18,11 @@ ul {
     margin: 0 auto;
     position: relative;
 }   
-
+.lt_main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
 /* 乐淘头部开始 */
 .lt_head {
     width: 100%;
