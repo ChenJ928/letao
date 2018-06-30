@@ -98,4 +98,8 @@ ul {
     margin-bottom: 0;
     color: white;
 }
+.lt_foot .current,
+.lt_foot .current p{
+    color: orange;
+}
 /* 乐淘脚部结束 */
