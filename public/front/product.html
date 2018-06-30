@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
     <link rel="stylesheet" href="./lib/mui/css/mui.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/category.css">
+    <link rel="stylesheet" href="./css/product.css">
 </head>
 
 <body>
@@ -21,40 +21,27 @@
             <!-- 头部左边 -->
             <div class="head_left">
                 <a href="#">
-                    <i class="fa fa-home"></i>
-                </a>
-            </div>
-            <!-- 头部右边 -->
-            <div class="head_right">
-                <a href="search.html">
-                    <i class="fa fa-search"></i>
+                    <i class="mui-icon mui-icon-back"></i>
                 </a>
             </div>
             <!-- 头部中间 -->
-            <div class="head_title">乐淘云购</div>
-
+            <div class="head_title">商品列表</div>
         </div>
 
         <!-- 内容 -->
         <div class="lt_main">
-            <!-- 主体左部 -->
-            <div class="main_left mui-pull-left">
-                <!-- 区域滚动 -->
-                <div class="mui-scroll-wrapper">
-                    <div class="mui-scrioll">
-                        <ul id="nav_left">
-                            <!-- 左部坑 -->
-                        </ul>
-                    </div>
-                </div>
+            <div class="main_search">
+                <input type="text">
+                <div class="search_btn"><a href="product.html">搜索</a></div>
             </div>
-            <!-- 主体右部 -->
-            <div class="main_right mui-pull-right">
-                        <ul id="nav_right">
-                            <!-- 右部大坑 -->
-                        </ul>
+            <div class="main_sort">
+                <ul class="mui-clearfix">
+                    <li><a href="">上架时间 <i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="">价格 <i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="">库存 <i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="">折扣 <i class="fa fa-angle-down"></i></a></li>
+                </ul>
             </div>
-            
         </div>
 
 
@@ -68,7 +55,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="category.html" class="current">
+                    <a href="category.html">
                         <i class="fa fa-bars"></i>
                         <p>分类页</p>
                     </a>
@@ -87,30 +74,13 @@
                 </li>
             </ul>
         </div>
+        
     </div>
-
-    <!-- 左部模块化 -->
-    <script type="text/html" id="ltem">
-        {{each rows v i}}
-            <li class="{{i === 0 ? 'current' : ''}}" data-id="{{v.id}}"><a href="#">{{v.categoryName}}</a></li>
-        {{/each}}
-    </script>
-
-    <!-- 右部模块化 -->
-    <script type="text/html" id="rtem">
-        {{if rows.length === 0}}
-            <p>没有什么东西留下了</p>
-        {{else}}
-            {{each rows v i}}
-                <li><a href=""><img src="{{v.brandLogo}}"><p>{{v.brandName}}</p></a></li>
-            {{/each}}
-        {{/if}}
-    </script>
     <script src="./lib/mui/js/mui.js"></script>
     <script src="./lib/zepto/zepto.min.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./js/common.js"></script>
-    <script src="./js/category.js"></script>
+    <script src="./js/product.js"></script>
 </body>
 
 </html>

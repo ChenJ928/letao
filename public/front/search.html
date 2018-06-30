@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
     <link rel="stylesheet" href="./lib/mui/css/mui.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/category.css">
+    <link rel="stylesheet" href="./css/search.css">
 </head>
 
 <body>
@@ -21,40 +21,23 @@
             <!-- 头部左边 -->
             <div class="head_left">
                 <a href="#">
-                    <i class="fa fa-home"></i>
-                </a>
-            </div>
-            <!-- 头部右边 -->
-            <div class="head_right">
-                <a href="search.html">
-                    <i class="fa fa-search"></i>
+                    <i class="mui-icon mui-icon-back"></i>
                 </a>
             </div>
             <!-- 头部中间 -->
-            <div class="head_title">乐淘云购</div>
-
+            <div class="head_title">搜索中心</div>
         </div>
 
         <!-- 内容 -->
         <div class="lt_main">
-            <!-- 主体左部 -->
-            <div class="main_left mui-pull-left">
-                <!-- 区域滚动 -->
-                <div class="mui-scroll-wrapper">
-                    <div class="mui-scrioll">
-                        <ul id="nav_left">
-                            <!-- 左部坑 -->
-                        </ul>
+            <div class="main_search">
+                <input type="text" placeholder="请输入想要的商品">
+                <div class="search_btn"><a href="product.html">搜索</a></div>
+                <div class="search_history mui-clearfix"  >
+                    <div class="history" id="sul">
                     </div>
                 </div>
             </div>
-            <!-- 主体右部 -->
-            <div class="main_right mui-pull-right">
-                        <ul id="nav_right">
-                            <!-- 右部大坑 -->
-                        </ul>
-            </div>
-            
         </div>
 
 
@@ -68,7 +51,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="category.html" class="current">
+                    <a href="category.html">
                         <i class="fa fa-bars"></i>
                         <p>分类页</p>
                     </a>
@@ -87,30 +70,31 @@
                 </li>
             </ul>
         </div>
+
+        <!-- 搜索历史模块化 -->
+        <script type="text/html" id="stem">
+            {{if arr.length === 0}}
+                <p>没有历史记录</p>
+            {{else}}
+                    <span>搜索历史</span>
+                    <a class="mui-pull-right delete-clear"><i class="fa fa-trash"></i>清空历史记录</a>
+                        <ul class="mui-clearfix">
+                        {{each arr v i}}
+                            <li>
+                                <a href="#">{{v}}</a>
+                                <i data-index="{{i}}" class="mui-icon mui-icon-closeempty mui-pull-right btn_delete"></i>
+                            </lid>
+                        {{/each}}
+                        </ul>
+            {{/if}}
+        </script>
+        
     </div>
-
-    <!-- 左部模块化 -->
-    <script type="text/html" id="ltem">
-        {{each rows v i}}
-            <li class="{{i === 0 ? 'current' : ''}}" data-id="{{v.id}}"><a href="#">{{v.categoryName}}</a></li>
-        {{/each}}
-    </script>
-
-    <!-- 右部模块化 -->
-    <script type="text/html" id="rtem">
-        {{if rows.length === 0}}
-            <p>没有什么东西留下了</p>
-        {{else}}
-            {{each rows v i}}
-                <li><a href=""><img src="{{v.brandLogo}}"><p>{{v.brandName}}</p></a></li>
-            {{/each}}
-        {{/if}}
-    </script>
     <script src="./lib/mui/js/mui.js"></script>
     <script src="./lib/zepto/zepto.min.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./js/common.js"></script>
-    <script src="./js/category.js"></script>
+    <script src="./js/search.js"></script>
 </body>
 
 </html>

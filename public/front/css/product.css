@@ -1,0 +1,48 @@
+.lt_main {
+    padding: 10px;
+}
+/* 搜索框 */
+.lt_main .main_search {
+    position: relative;
+}
+.lt_main .main_search input {
+    width: 100%;
+    padding: 10px 65px 10px 15px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    border-radius: 5px;
+    border: 1px solid #007AFF;
+}
+.lt_main .main_search .search_btn {
+    width: 65px;
+    height: 39px;
+    border-radius: 0 5px 5px 0;
+    background-color: #007AFF;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    text-align: center;
+    line-height: 38px;
+}
+.lt_main .main_search .search_btn a {
+    display: block;
+    color: #fff;
+}
+
+ /* 导航栏 */
+ .main_sort  ul {
+     margin-top: 10px;
+ }
+ .main_sort  ul li {
+     float: left;
+     width: 25%;
+     padding: 5px;
+     background-color: #fff;
+ }
+ .main_sort  ul li a {
+     display: block;
+     width: 100%;
+     font-size: 14px;
+     color: #666;
+     text-align: center;
+ }
